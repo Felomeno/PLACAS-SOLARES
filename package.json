@@ -1,14 +1,22 @@
 {
-  "name": "solara-tmp",
+  "name": "solara",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "qa:shots": "node scripts/qa/shot.mjs",
+    "qa:interact": "node scripts/qa/interact.mjs",
+    "qa:extremes": "node scripts/qa/extremes.mjs",
+    "qa:contrast": "node scripts/qa/contrast.mjs"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "clsx": "^2.1.1",
+    "motion": "^13.4.1",
     "next": "16.3.6",
     "react": "19.2.8",
     "react-dom": "19.2.8"
@@ -20,6 +28,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
+    "lighthouse": "^13.5.0",
+    "playwright": "^1.63.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
