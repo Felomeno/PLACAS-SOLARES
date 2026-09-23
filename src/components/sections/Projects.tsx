@@ -11,11 +11,11 @@ const kwh = (n: number) => `${n.toLocaleString("es-ES", { useGrouping: true })} 
 // Galería en dos columnas con alturas desfasadas: fotos grandes y los datos como etiquetas.
 export function Projects() {
   return (
-    <section id="proyectos" className="bg-cream py-24 sm:py-32">
+    <section id="proyectos" className="bg-paper py-24 sm:py-32">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <p className="label text-green-deep">Instalaciones tipo</p>
+            <p className="label text-ink">Instalaciones tipo</p>
             <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl lg:text-7xl">
               Tejados listos para producir.
             </h2>
@@ -39,7 +39,7 @@ export function Projects() {
               </div>
               <ul className="mt-5 flex flex-wrap gap-2" aria-label="Datos de la instalación">
                 {[kwp(p.kwp), `${p.paneles} × 450 W`, kwh(p.produccionKwh)].map((d) => (
-                  <li key={d} className="tnum rounded-full bg-cream-deep px-3.5 py-1.5 text-sm text-ink">
+                  <li key={d} className="tnum rounded-[6px] bg-cream-deep px-3 py-1.5 text-sm text-ink">
                     {d}
                   </li>
                 ))}
@@ -48,7 +48,7 @@ export function Projects() {
                 <h3 className="font-display text-2xl font-normal tracking-[-0.02em] text-ink sm:text-3xl">
                   {p.title}, {p.location}
                 </h3>
-                <p className="tnum text-sm font-semibold text-green-deep">Ahorro estimado {eur(p.ahorroAnual)}/año</p>
+                <p className="tnum text-sm font-semibold text-sky-ink">Ahorro estimado {eur(p.ahorroAnual)}/año</p>
               </div>
               <p className="mt-1 text-xs text-ink-muted">Proyecto demostrativo</p>
             </article>

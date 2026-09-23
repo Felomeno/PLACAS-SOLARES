@@ -34,33 +34,35 @@ export function Navbar() {
   const solidStyles = solid || menuOpen;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-      {/* Barra flotante: siempre legible sobre la foto del hero; al hacer scroll gana sombra. */}
+    <header className="fixed inset-x-0 top-0 z-50">
+      {/* Barra a todo el ancho, recta y con filete inferior: siempre legible sobre la foto; al hacer scroll gana sombra. */}
       <div
-        className={`mx-auto flex h-14 max-w-[1400px] items-center justify-between rounded-full border pr-2 pl-5 backdrop-blur-md transition-[box-shadow,background-color,border-color] duration-300 ease-out sm:h-16 sm:pl-6 ${
+        className={`border-b backdrop-blur-md transition-[box-shadow,background-color,border-color] duration-300 ease-out ${
           solidStyles
-            ? "border-line bg-cream/92 shadow-[0_8px_30px_-12px_rgb(19_26_21/25%)]"
-            : "border-cream/40 bg-cream/80"
+            ? "border-line bg-paper/97 shadow-[0_10px_30px_-18px_rgb(20_41_58/30%)]"
+            : "border-transparent bg-paper/95"
         }`}
       >
-        <Link href="#inicio" className="font-display text-lg font-semibold tracking-tight text-ink">
+        <Container className="flex h-16 items-center justify-between sm:h-[4.5rem]">
+        <Link href="#inicio" className="font-display flex items-center gap-2.5 text-lg font-semibold tracking-[0.08em] text-ink">
+          <span className="size-2.5 rounded-full bg-sky-deep" aria-hidden />
           SOLARA
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-1 text-[0.92rem] font-medium text-ink lg:flex">
+        <nav aria-label="Principal" className="hidden items-center gap-9 text-[0.92rem] font-medium text-ink lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-4 py-2 transition-colors duration-200 hover:bg-green-light hover:text-green-deep"
+              className="relative py-2 after:absolute after:inset-x-0 after:bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-ink after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.23,1,0.32,1)] hover:after:scale-x-100"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-1">
-          <Button as="a" href="#calculadora" variant="primary" className="hidden !px-5 !py-2.5 sm:inline-flex">
+        <div className="flex items-center gap-2">
+          <Button as="a" href="#calculadora" variant="deep" className="!px-5 !py-2.5 max-sm:!hidden">
             Calcula tu instalación
           </Button>
           <button
@@ -68,11 +70,12 @@ export function Navbar() {
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-carbon text-cream transition-transform active:scale-[0.95] sm:h-11 sm:w-11 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-[10px] border border-ink/20 text-ink transition-[transform,border-color] hover:border-ink/50 active:scale-[0.95] sm:h-11 sm:w-11 lg:hidden"
           >
             {menuOpen ? <X size={20} /> : <List size={20} />}
           </button>
         </div>
+        </Container>
       </div>
 
       <AnimatePresence>
@@ -82,7 +85,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-2 max-w-[1400px] rounded-[28px] border border-line bg-cream shadow-[0_20px_50px_-20px_rgb(19_26_21/35%)] lg:hidden"
+            className="border-b border-line bg-paper shadow-[0_24px_40px_-24px_rgb(20_41_58/35%)] lg:hidden"
           >
             <Container>
               <nav aria-label="Menú móvil" className="flex flex-col gap-1 py-6 text-lg font-medium text-ink">
@@ -91,12 +94,12 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="rounded-lg px-2 py-3"
+                    className="border-b border-line py-4"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Button as="a" href="#calculadora" variant="primary" className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
+                <Button as="a" href="#calculadora" variant="deep" className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
                   Calcula tu instalación
                 </Button>
               </nav>

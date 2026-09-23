@@ -52,7 +52,7 @@ const COMPONENTES = [
 export function PanelShowcase() {
   return (
     <section id="paneles" className="bg-cream px-2 py-2 sm:px-3">
-      <div className="rounded-[28px] bg-carbon py-24 text-cream sm:rounded-[36px] sm:py-32">
+      <div className="surface-sky rounded-[28px] bg-carbon py-24 text-cream sm:rounded-[36px] sm:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
           <figure className="relative lg:col-span-5">
@@ -75,7 +75,7 @@ export function PanelShowcase() {
                     transform: "translateY(-50%)",
                   }}
                 >
-                  <span className="size-2.5 shrink-0 rounded-full border-2 border-green-bright bg-carbon" />
+                  <span className="size-2.5 shrink-0 rounded-full border-2 border-sky bg-carbon" />
                   <span className="h-px w-8 bg-cream/70" />
                   <span className="rounded-[6px] bg-carbon/80 px-2 py-1 text-xs font-medium whitespace-nowrap text-cream">
                     {a.label}
@@ -86,7 +86,7 @@ export function PanelShowcase() {
           </figure>
 
           <div className="lg:col-span-7 lg:self-center lg:pl-6">
-            <p className="label text-green-bright">Producto</p>
+            <p className="label text-sky">Producto</p>
             <h2 className="mt-5 font-display max-w-xl text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance sm:text-6xl lg:text-6xl">
               Paneles pensados para trabajar décadas en tu tejado.
             </h2>
@@ -98,7 +98,7 @@ export function PanelShowcase() {
             <div className="mt-12 grid grid-cols-2 gap-8 border-t border-cream/25 pt-8">
               {DESTACADAS.map((d) => (
                 <div key={d.value}>
-                  <p className="font-display tnum text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-green-bright sm:text-5xl">
+                  <p className="font-display tnum text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-sky sm:text-5xl">
                     {d.value}
                   </p>
                   <p className="mt-2 text-sm text-cream/75">{d.label}</p>
@@ -169,7 +169,7 @@ export function PanelShowcase() {
                         {" "}
                         <a
                           href="#como-funciona"
-                          className="text-green-bright underline decoration-green-bright/50 underline-offset-4 transition-colors hover:decoration-green-bright"
+                          className="text-sky underline decoration-sky/50 underline-offset-4 transition-colors hover:decoration-sky"
                         >
                           Así funciona de noche
                         </a>

@@ -62,7 +62,7 @@ export function FinalCta() {
   return (
     <section id="contacto" className="bg-cream px-2 pt-2 pb-2 sm:px-3">
       {/* Cierre en un marco redondeado con la foto a sangre: el formulario flota sobre ella. */}
-      <div className="relative overflow-hidden rounded-[28px] bg-carbon py-20 text-cream sm:rounded-[36px] sm:py-28">
+      <div className="surface-sky relative overflow-hidden rounded-[28px] bg-carbon py-20 text-cream sm:rounded-[36px] sm:py-28">
       <Image
         src="/images/hero-main.jpg"
         alt=""
@@ -77,7 +77,7 @@ export function FinalCta() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
           <div className="lg:self-center">
             <div>
-              <p className="label text-green-bright">Estudio solar sin compromiso</p>
+              <p className="label text-sky">Estudio solar sin compromiso</p>
               <h2 className="font-display mt-5 text-5xl leading-[0.98] font-normal tracking-[-0.032em] text-balance sm:text-7xl lg:text-[5.5rem]">
                 Tu tejado ya tiene potencial.
               </h2>
@@ -87,7 +87,7 @@ export function FinalCta() {
               </p>
               <a
                 href="#calculadora"
-                className="mt-8 inline-flex items-center gap-2 text-[0.95rem] font-semibold text-cream underline decoration-green-bright underline-offset-[6px] transition-colors hover:text-green-bright"
+                className="mt-8 inline-flex items-center gap-2 text-[0.95rem] font-semibold text-cream underline decoration-sky underline-offset-[6px] transition-colors hover:text-sky"
               >
                 Prefiero calcularlo yo primero
               </a>
@@ -96,8 +96,8 @@ export function FinalCta() {
 
           <div>
             {status === "success" ? (
-              <div className="flex h-full flex-col justify-center rounded-[28px] border border-cream/15 bg-carbon/85 p-7 backdrop-blur-md sm:p-10">
-                <CheckCircle size={40} weight="light" className="text-green-bright" />
+              <div className="flex h-full flex-col justify-center rounded-[20px] border border-cream/15 bg-carbon/85 p-7 backdrop-blur-md sm:p-10">
+                <CheckCircle size={40} weight="light" className="text-sky" />
                 <p className="font-display mt-5 text-3xl">Solicitud recibida</p>
                 <p className="mt-3 text-cream/75">
                   Gracias, {values.nombre.split(" ")[0]}. Un técnico revisaría tu caso y te llamaría en menos de 24 horas
@@ -108,7 +108,7 @@ export function FinalCta() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="rounded-[28px] border border-cream/15 bg-carbon/85 p-7 backdrop-blur-md sm:p-10">
+              <form onSubmit={handleSubmit} noValidate className="rounded-[20px] border border-cream/15 bg-carbon/85 p-7 backdrop-blur-md sm:p-10">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   {FIELDS.map((field) => (
                     <div key={field.name} className={field.name === "nombre" || field.name === "email" || field.name === "factura" ? "sm:col-span-2" : ""}>
@@ -127,10 +127,10 @@ export function FinalCta() {
                         aria-invalid={Boolean(errors[field.name])}
                         aria-describedby={errors[field.name] ? `cta-${field.name}-error` : undefined}
                         className={clsx(
-                          "mt-2 w-full rounded-full border bg-cream/10 px-5 py-3.5 text-cream transition-colors placeholder:text-cream/70",
+                          "mt-2 w-full rounded-[10px] border bg-carbon-soft px-4 py-3.5 text-cream transition-colors placeholder:text-cream/70",
                           errors[field.name]
                             ? "border-alert-on-dark"
-                            : "border-cream/35 hover:border-cream/55 focus-visible:border-green-bright",
+                            : "border-cream/35 hover:border-cream/55 focus-visible:border-sky",
                         )}
                       />
                       {errors[field.name] && (

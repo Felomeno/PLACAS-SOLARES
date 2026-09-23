@@ -13,7 +13,7 @@ const INCLUYE = [
 export function Trust() {
   return (
     <section className="bg-cream px-2 py-2 sm:px-3">
-      <div className="relative overflow-hidden rounded-[28px] bg-carbon text-cream sm:rounded-[36px]">
+      <div className="surface-sky relative overflow-hidden rounded-[28px] bg-carbon text-cream sm:rounded-[36px]">
         <Image
           src="/images/panel-reflejo.jpg"
           alt=""
@@ -42,7 +42,7 @@ export function Trust() {
             </div>
           </div>
 
-          <dl className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-[22px] bg-cream/15 sm:mt-28 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-[16px] bg-cream/15 sm:mt-28 sm:grid-cols-2 lg:grid-cols-4">
             {INCLUYE.map((item) => (
               <div key={item.title} className="bg-carbon/80 p-6 backdrop-blur-sm sm:p-7">
                 <dt className="font-display text-xl font-normal">{item.title}</dt>

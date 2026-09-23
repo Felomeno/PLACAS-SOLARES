@@ -43,7 +43,7 @@ const SOCIAL = [
 export function Footer() {
   return (
     <footer className="bg-cream px-2 pb-2 sm:px-3 sm:pb-3">
-      <div className="rounded-[28px] bg-carbon pt-16 pb-10 text-cream sm:rounded-[36px] sm:pt-20">
+      <div className="surface-sky rounded-[28px] bg-carbon pt-16 pb-10 text-cream sm:rounded-[36px] sm:pt-20">
       <Container>
         <div className="flex flex-col gap-8 border-b border-cream/15 pb-14 sm:pb-20 lg:flex-row lg:items-end lg:justify-between">
           <p className="font-display max-w-2xl text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance sm:text-6xl">
@@ -68,7 +68,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="inline-flex min-h-[44px] items-center text-sm text-cream/75 transition-colors hover:text-cream"
+                      className="inline-flex min-h-[44px] items-center text-sm text-cream/75 transition-colors hover:text-sky"
                     >
                       {link.label}
                     </Link>
@@ -84,7 +84,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:hola@solara.es"
-                  className="inline-flex min-h-[44px] items-center transition-colors hover:text-cream"
+                  className="inline-flex min-h-[44px] items-center transition-colors hover:text-sky"
                 >
                   hola@solara.es
                 </a>
@@ -92,7 +92,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+34900000000"
-                  className="inline-flex min-h-[44px] items-center transition-colors hover:text-cream"
+                  className="inline-flex min-h-[44px] items-center transition-colors hover:text-sky"
                 >
                   900 000 000
                 </a>
@@ -107,7 +107,7 @@ export function Footer() {
                   <a
                     href="#"
                     aria-label={label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-cream/50 hover:text-cream"
+                    className="flex h-10 w-10 items-center justify-center rounded-[10px] border border-cream/20 text-cream/70 transition-colors hover:border-sky/70 hover:text-sky"
                   >
                     <Icon size={18} />
                   </a>
@@ -132,7 +132,7 @@ export function Footer() {
             className="font-display"
             fontSize="190"
             fontWeight="400"
-            style={{ fill: "rgb(246 244 236 / 12%)" }}
+            style={{ fill: "rgb(20 41 58 / 7%)" }}
           >
             SOLARA
           </text>

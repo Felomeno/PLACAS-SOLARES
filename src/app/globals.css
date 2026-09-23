@@ -1,25 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Base: crema clara, verde muy oscuro para las secciones profundas y un verde esmeralda vivo como acento. */
-  --color-cream: #faf8f2;
-  --color-cream-deep: #edf2ea; /* verde niebla: tarjetas y superficies */
-  --color-olive: #b7c9b4;
-  --color-carbon: #12372a; /* verde profundo: hero, secciones oscuras y footer */
-  --color-carbon-soft: #1a4637;
-  --color-ink: #10231b;
-  --color-ink-muted: #4a5b51;
-  --color-cream-muted: #bfcdc2;
-  --color-green-deep: #147a3a; /* texto verde sobre claro: 4,7:1 en tarjetas, 5:1 en crema */
-  --color-green: #16a34a; /* botones y estados activos, con texto oscuro */
-  --color-green-vivid: #16a34a; /* gráficos, flujos y foco */
-  --color-green-light: #dcfce7;
-  --color-green-soft: #f0fdf4;
-  --color-green-bright: #22c55e; /* acento luminoso sobre fondos oscuros */
+  /* Base azul cielo claro: superficies claras frías y marino profundo en lugar de grafito.
+     Las secciones que antes eran oscuras usan .surface-sky (azul cielo claro con texto marino).
+     El azul cielo luminoso queda para acentos sobre marino; sobre claro, el azul profundo. */
+  --color-paper: #fbfdff; /* blanco frío */
+  --color-cream: #f2f8fc; /* azul muy suave: fondo base */
+  --color-cream-deep: #e1eff8; /* azul claro: tarjetas y secciones alternas */
+  --color-olive: #3a4232; /* reservado, sin uso */
+  --color-carbon: #163449; /* marino: hero, modo noche y estados seleccionados */
+  --color-carbon-soft: #21465f;
+  --color-ink: #14293a; /* texto marino */
+  --color-ink-muted: #4b6072;
+  --color-cream-muted: #c9dce8;
+  --color-on-sky: #14293a; /* texto sobre botones azul cielo */
+  --color-sky: #5db7e8; /* azul cielo: CTA y acentos sobre grafito */
+  --color-sky-hover: #86caef; /* hover luminoso sobre grafito */
+  --color-sky-light: #dceff9; /* azul claro: rellenos suaves, selección */
+  --color-sky-soft: #eff8fc; /* azul muy suave */
+  --color-sky-deep: #2a73a1; /* azul profundo: botones, iconos y líneas sobre claro */
+  --color-sky-ink: #1f6690; /* texto azul sobre claro (>=4,5:1) */
+  --color-sky-navy: #183a52; /* azul oscuro: hover del azul profundo */
   --color-alert: #b3261e;
   --color-alert-on-dark: #f6a98d;
-  --color-line: rgb(16 35 27 / 12%);
-  --color-line-dark: rgb(250 248 242 / 14%);
+  --color-line: rgb(20 41 58 / 12%);
+  --color-line-dark: rgb(255 253 248 / 14%);
 
   --font-display: var(--font-bricolage);
   --font-body: var(--font-manrope);
@@ -32,7 +37,23 @@
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* Secciones antes oscuras, ahora en azul cielo claro: se invierten los tokens del bloque
+   para que los mismos componentes lean texto marino sobre azul claro. */
+.surface-sky {
+  --color-carbon: #d6ebf7; /* superficie azul cielo claro */
+  --color-carbon-soft: #e8f4fb;
+  --color-cream: #14293a; /* texto */
+  --color-paper: #14293a;
+  --color-cream-muted: #4b6072;
+  --color-sky: #1f6690; /* acento profundo sobre claro (>=5:1) */
+  --color-sky-hover: #183a52;
+  --color-on-sky: #fbfdff;
+  --color-alert-on-dark: #b3261e;
+  --color-line-dark: rgb(20 41 58 / 14%);
+}
+
 @theme inline {
+  --color-paper: var(--color-paper);
   --color-cream: var(--color-cream);
   --color-cream-deep: var(--color-cream-deep);
   --color-olive: var(--color-olive);
@@ -41,12 +62,14 @@
   --color-ink: var(--color-ink);
   --color-ink-muted: var(--color-ink-muted);
   --color-cream-muted: var(--color-cream-muted);
-  --color-green-deep: var(--color-green-deep);
-  --color-green: var(--color-green);
-  --color-green-vivid: var(--color-green-vivid);
-  --color-green-light: var(--color-green-light);
-  --color-green-soft: var(--color-green-soft);
-  --color-green-bright: var(--color-green-bright);
+  --color-sky: var(--color-sky);
+  --color-on-sky: var(--color-on-sky);
+  --color-sky-hover: var(--color-sky-hover);
+  --color-sky-light: var(--color-sky-light);
+  --color-sky-soft: var(--color-sky-soft);
+  --color-sky-deep: var(--color-sky-deep);
+  --color-sky-ink: var(--color-sky-ink);
+  --color-sky-navy: var(--color-sky-navy);
   --color-alert: var(--color-alert);
   --color-alert-on-dark: var(--color-alert-on-dark);
   --color-line: var(--color-line);
@@ -92,7 +115,10 @@ body {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 2px;
-  background: var(--color-green);
+  background: var(--color-sky-deep);
+}
+.bg-carbon .label::before {
+  background: var(--color-sky);
 }
 
 /* Revelado de imagen: recorte que se abre al entrar en pantalla. Visible por defecto. */
@@ -122,7 +148,7 @@ body {
   appearance: none;
   height: 6px;
   border-radius: 999px;
-  background: linear-gradient(to right, var(--color-green) var(--fill), rgb(16 35 27 / 14%) var(--fill));
+  background: linear-gradient(to right, var(--color-sky-deep) var(--fill), rgb(20 41 58 / 14%) var(--fill));
   cursor: pointer;
 }
 .range::-webkit-slider-thumb {
@@ -130,38 +156,42 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 999px;
-  background: var(--color-cream);
-  border: 6px solid var(--color-green);
-  box-shadow: 0 2px 8px rgb(19 26 21 / 18%);
+  background: var(--color-carbon);
+  border: 5px solid var(--color-sky-deep);
+  box-shadow: 0 0 0 1px var(--color-carbon), 0 2px 8px rgb(20 41 58 / 22%);
   transition: transform 160ms var(--ease-out);
 }
 .range::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background: var(--color-cream);
-  border: 6px solid var(--color-green);
-  box-shadow: 0 2px 8px rgb(19 26 21 / 18%);
+  background: var(--color-carbon);
+  border: 5px solid var(--color-sky-deep);
+  box-shadow: 0 0 0 1px var(--color-carbon), 0 2px 8px rgb(20 41 58 / 22%);
 }
 .range:active::-webkit-slider-thumb {
   transform: scale(1.12);
 }
 
 ::selection {
-  background: var(--color-green-light);
+  background: var(--color-sky-light);
   color: var(--color-carbon);
 }
 
 input,
 textarea,
 select {
-  caret-color: var(--color-green-vivid);
+  caret-color: var(--color-sky-deep);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-green-vivid);
+  outline: 2px solid var(--color-ink);
   outline-offset: 3px;
   border-radius: 4px;
+}
+/* Sobre grafito el foco pasa a azul cielo para mantener el contraste. */
+.bg-carbon :focus-visible {
+  outline-color: var(--color-sky);
 }
 
 @media (prefers-reduced-motion: reduce) {

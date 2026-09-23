@@ -44,10 +44,10 @@ export function SavingsCalculator() {
   const columnas = Math.ceil(result.paneles / filas);
 
   return (
-    <section id="calculadora" className="bg-cream py-24 sm:py-32">
+    <section id="calculadora" className="bg-paper py-24 sm:py-32">
       <Container>
         <div className="max-w-3xl">
-          <p className="label text-green-deep">Calculadora de instalación solar</p>
+          <p className="label text-ink">Calculadora de instalación solar</p>
           <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl lg:text-7xl">
             Configura tu instalación.
           </h2>
@@ -57,8 +57,8 @@ export function SavingsCalculator() {
         </div>
         <Reveal className="mt-12 sm:mt-16">
           {/* Herramienta: configuración a la izquierda y simulación a la derecha, en un mismo marco. */}
-          <div className="grid grid-cols-1 gap-3 rounded-[32px] bg-cream-deep p-2 sm:p-3 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-            <div className="flex flex-col gap-9 rounded-[24px] bg-cream p-6 sm:p-8">
+          <div className="grid grid-cols-1 gap-3 rounded-[24px] bg-cream-deep p-2 sm:p-3 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+            <div className="flex flex-col gap-9 rounded-[18px] bg-paper p-6 sm:p-8">
               <p className="text-sm font-semibold text-ink">Tus datos</p>
 
               <div>
@@ -94,7 +94,7 @@ export function SavingsCalculator() {
                   id="provincia"
                   value={provincia}
                   onChange={(e) => setProvincia(e.target.value)}
-                  className="mt-3 w-full rounded-full border border-ink/15 bg-cream-deep/60 px-5 py-3.5 text-base text-ink transition-colors hover:border-ink/35 focus-visible:border-green-vivid"
+                  className="mt-3 w-full rounded-[10px] border border-ink/15 bg-cream px-4 py-3.5 text-base text-ink transition-colors hover:border-ink/35 focus-visible:border-ink"
                 >
                   {PROVINCIAS.map((p) => (
                     <option key={p.nombre} value={p.nombre}>
@@ -108,7 +108,7 @@ export function SavingsCalculator() {
                 <span id="tipo-label" className="text-sm font-medium text-ink">
                   Tipo de vivienda
                 </span>
-                <div role="group" aria-labelledby="tipo-label" className="mt-3 grid grid-cols-1 gap-1 rounded-[20px] bg-cream-deep/70 p-1 sm:grid-cols-3 sm:rounded-full lg:grid-cols-1 lg:rounded-[20px]">
+                <div role="group" aria-labelledby="tipo-label" className="mt-3 grid grid-cols-1 gap-1 rounded-[12px] bg-cream-deep/70 p-1 sm:grid-cols-3 lg:grid-cols-1">
                   {TIPOS_VIVIENDA.map((t) => (
                     <button
                       key={t.value}
@@ -116,8 +116,8 @@ export function SavingsCalculator() {
                       onClick={() => setTipo(t.value)}
                       aria-pressed={tipo === t.value}
                       className={clsx(
-                        "rounded-full px-4 py-3 text-sm font-medium transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
-                        tipo === t.value ? "bg-green text-ink" : "text-ink hover:bg-cream",
+                        "rounded-[8px] px-4 py-3 text-sm font-medium transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
+                        tipo === t.value ? "bg-carbon text-cream" : "text-ink hover:bg-paper",
                       )}
                     >
                       {t.label}
@@ -125,7 +125,7 @@ export function SavingsCalculator() {
                   ))}
                 </div>
               </div>
-              <div className="mt-auto rounded-[20px] bg-cream-deep/60 p-5">
+              <div className="mt-auto rounded-[12px] border border-line p-5">
                 <p className="text-sm font-semibold text-ink">Qué tiene en cuenta</p>
                 <ul className="mt-3 space-y-1.5 text-sm text-ink-muted">
                   <li>Paneles de referencia de 450 W</li>
@@ -136,13 +136,13 @@ export function SavingsCalculator() {
             </div>
 
             {/* Resultado dibujado como la propia cubierta: un panel por cada placa recomendada. */}
-            <div className="rounded-[24px] bg-carbon px-6 py-8 text-cream sm:px-9 sm:py-9" aria-live="polite">
+            <div className="surface-sky rounded-[18px] bg-carbon px-6 py-8 text-cream sm:px-9 sm:py-9" aria-live="polite">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <p className="font-display text-xl">Tu instalación recomendada</p>
-                <p className="text-sm text-green-bright">Estimación orientativa.</p>
+                <p className="text-sm text-sky">Estimación orientativa.</p>
               </div>
 
-              <div className="mt-7 rounded-[20px] bg-carbon-soft p-4 sm:p-6">
+              <div className="mt-7 rounded-[14px] bg-carbon-soft p-4 sm:p-6">
                 <div
                   className="mx-auto grid gap-1.5 sm:gap-2"
                   style={{ gridTemplateColumns: `repeat(${columnas}, minmax(0, 1fr))`, maxWidth: `${columnas * 3.4}rem` }}
@@ -200,7 +200,7 @@ export function SavingsCalculator() {
                     <LiveNumber
                       value={result.ahorroAnual}
                       format={(n) => eur.format(Math.round(n / 10) * 10)}
-                      className="font-display tnum text-2xl text-green-bright"
+                      className="font-display tnum text-2xl text-sky"
                     />
                   </dd>
                 </div>
@@ -213,7 +213,7 @@ export function SavingsCalculator() {
                   {PERFIL_MENSUAL.map((f, i) => (
                     <span
                       key={i}
-                      className="w-full rounded-[4px] bg-green-bright/85 transition-[height] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                      className="w-full rounded-t-[3px] bg-sky transition-[height] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
                       style={{ height: `${(f / PICO) * 100 * Math.min(1, 0.35 + result.produccionAnualKwh / 14000)}%` }}
                     />
                   ))}

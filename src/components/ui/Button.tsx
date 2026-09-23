@@ -1,16 +1,17 @@
 import { type ComponentPropsWithoutRef, type ElementType, type ReactNode } from "react";
 import clsx from "clsx";
 
-type Variant = "primary" | "light" | "secondary" | "secondaryOnDark" | "ghost";
+type Variant = "primary" | "deep" | "light" | "secondary" | "secondaryOnDark" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-7 py-3.5 text-[0.95rem] font-semibold transition-[transform,background-color,color,border-color] duration-200 ease-out active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2";
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] px-7 py-3.5 text-[0.95rem] font-semibold transition-[transform,background-color,color,border-color] duration-200 ease-out active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-green text-ink hover:bg-green-bright",
-  light: "bg-cream text-ink hover:bg-green-light",
+  primary: "bg-sky text-on-sky hover:bg-sky-hover",
+  deep: "bg-sky-deep text-paper hover:bg-sky-navy",
+  light: "bg-paper text-ink hover:bg-sky-light",
   secondary: "border border-ink/25 text-ink hover:border-ink/55",
-  secondaryOnDark: "border border-cream/45 bg-carbon/30 text-cream backdrop-blur-sm hover:border-cream/80",
+  secondaryOnDark: "border border-paper/40 bg-carbon/25 text-paper backdrop-blur-sm hover:border-paper/80 hover:bg-paper/10",
   ghost: "text-inherit hover:opacity-70",
 };
 

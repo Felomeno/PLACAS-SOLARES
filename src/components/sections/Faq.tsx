@@ -11,11 +11,11 @@ export function Faq() {
   const reduce = useReducedMotion();
 
   return (
-    <section id="faq" className="scroll-mt-16 bg-cream py-24 sm:py-32">
+    <section id="faq" className="scroll-mt-16 bg-cream-deep py-24 sm:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="label text-green-deep">Preguntas frecuentes</p>
+            <p className="label text-ink">Preguntas frecuentes</p>
             <h2 className="mt-5 font-display text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-ink sm:text-6xl">
               Antes de instalar placas.
             </h2>
@@ -40,7 +40,7 @@ export function Faq() {
                         <Plus
                           size={22}
                           weight="light"
-                          className={`mt-0.5 shrink-0 text-ink transition-transform duration-300 ease-out ${
+                          className={`mt-0.5 shrink-0 transition-[transform,color] ${isOpen ? "text-sky-ink" : "text-ink"} duration-300 ease-out ${
                             isOpen ? "rotate-45" : ""
                           }`}
                         />

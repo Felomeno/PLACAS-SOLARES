@@ -11,7 +11,7 @@ const CONFIGURACION = [
 ];
 
 // El hero vive dentro de un marco redondeado con margen al viewport: la foto se lee
-// como un objeto, no como un fondo, y la barra flotante se apoya encima.
+// como un objeto, no como un fondo, y la barra de navegación se apoya encima.
 export function Hero() {
   return (
     <section id="inicio" className="bg-cream p-2 sm:p-3">
@@ -31,12 +31,12 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgb(22 33 27 / 88%) 0%, rgb(22 33 27 / 55%) 38%, rgb(22 33 27 / 10%) 70%, rgb(22 33 27 / 0%) 100%)",
+              "linear-gradient(to top, rgb(14 36 52 / 88%) 0%, rgb(14 36 52 / 55%) 38%, rgb(14 36 52 / 10%) 70%, rgb(14 36 52 / 0%) 100%)",
           }}
         />
         <div
           className="absolute inset-0 hidden lg:block"
-          style={{ background: "linear-gradient(to right, rgb(22 33 27 / 55%) 0%, rgb(22 33 27 / 0%) 55%)" }}
+          style={{ background: "linear-gradient(to right, rgb(14 36 52 / 55%) 0%, rgb(14 36 52 / 0%) 55%)" }}
         />
 
         <div className="relative w-full px-5 pt-28 pb-6 sm:px-10 sm:pb-10 lg:px-14 lg:pb-14">
@@ -62,8 +62,11 @@ export function Hero() {
             </div>
 
             {/* Ficha técnica: ancla la foto a un producto concreto. Solo en escritorio. */}
-            <div className="rise rise-2 hidden rounded-[22px] border border-cream/15 bg-carbon/70 p-5 backdrop-blur-md lg:block">
-              <p className="text-sm text-cream/85">Configuración de ejemplo, vivienda unifamiliar</p>
+            <div className="rise rise-2 hidden rounded-[16px] border border-cream/15 bg-carbon/70 p-5 backdrop-blur-md lg:block">
+              <p className="flex items-center gap-2 text-sm text-cream/85">
+                <span className="size-1.5 shrink-0 rounded-full bg-sky" aria-hidden />
+                Configuración de ejemplo, vivienda unifamiliar
+              </p>
               <dl className="mt-4">
                 {CONFIGURACION.map((row) => (
                   <div key={row.label} className="flex items-baseline justify-between border-t border-cream/15 py-3">

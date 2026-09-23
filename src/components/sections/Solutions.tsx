@@ -14,10 +14,10 @@ export function Solutions() {
 
   return (
     <section id="soluciones" className="bg-cream px-2 py-2 sm:px-3">
-      <div className="rounded-[28px] bg-carbon py-20 text-cream sm:rounded-[36px] sm:py-28">
+      <div className="surface-sky rounded-[28px] bg-carbon py-20 text-cream sm:rounded-[36px] sm:py-28">
         <Container>
           <div className="max-w-3xl">
-            <p className="label text-green-bright">Qué instalamos</p>
+            <p className="label text-sky">Qué instalamos</p>
             <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance sm:text-6xl lg:text-7xl">
               Todo lo que va en el tejado y detrás de la pared.
             </h2>
@@ -47,12 +47,16 @@ export function Solutions() {
                       </span>
                       <span
                         className={clsx(
-                          "flex size-10 shrink-0 items-center justify-center rounded-full transition-[background-color,color,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] sm:size-12",
-                          open ? "rotate-45 bg-green-bright text-carbon" : "bg-cream text-carbon group-hover:scale-105",
+                          "flex size-10 shrink-0 items-center justify-center rounded-[10px] transition-[background-color,color,border-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] sm:size-12",
+                          open ? "bg-sky text-on-sky" : "border border-cream/30 text-cream group-hover:border-cream/70",
                         )}
                         aria-hidden
                       >
-                        <Plus size={18} weight="bold" />
+                        <Plus
+                          size={18}
+                          weight="bold"
+                          className={clsx("transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]", open && "rotate-45")}
+                        />
                       </span>
                     </button>
                   </h3>
@@ -74,7 +78,7 @@ export function Solutions() {
                         )}
                       >
                         {s.image && (
-                          <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-carbon-soft">
+                          <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-carbon-soft">
                             <Image
                               src={s.image}
                               alt={s.imageAlt ?? ""}
@@ -90,7 +94,7 @@ export function Solutions() {
                             {s.tags.map((t) => (
                               <li
                                 key={t}
-                                className="rounded-full border border-cream/20 px-3.5 py-1.5 text-sm text-cream/85"
+                                className="rounded-[6px] border border-cream/20 px-3 py-1.5 text-sm text-cream/85"
                               >
                                 {t}
                               </li>

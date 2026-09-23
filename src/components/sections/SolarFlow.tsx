@@ -131,7 +131,7 @@ export function SolarFlow() {
   const etiquetas: Record<NodoId, { label: string; icon: React.ReactNode }> = {
     sol: {
       label: noche ? "Noche" : "Sol",
-      icon: noche ? <Moon size={34} weight="light" className="size-6 sm:size-[34px]" /> : <Sun size={34} weight="fill" className="size-6 text-green-vivid sm:size-[34px]" />,
+      icon: noche ? <Moon size={34} weight="light" className="size-6 sm:size-[34px]" /> : <Sun size={34} weight="fill" className="size-6 text-sky-deep sm:size-[34px]" />,
     },
     paneles: { label: "Paneles", icon: <SolarPanel size={34} weight="light" className="size-6 sm:size-[34px]" /> },
     inversor: { label: "Inversor", icon: <WaveSine size={34} weight="light" className="size-6 sm:size-[34px]" /> },
@@ -149,7 +149,7 @@ export function SolarFlow() {
       <Container>
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <div>
-            <p className="label text-green-deep">Cómo funciona</p>
+            <p className="label text-ink">Cómo funciona</p>
             <h2 className="mt-5 font-display max-w-lg text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl">
               Cómo funciona una instalación solar
             </h2>
@@ -158,7 +158,7 @@ export function SolarFlow() {
               la red.
             </p>
 
-            <div className="mt-8 inline-flex rounded-full border border-ink/15 p-1" role="group" aria-label="Momento del día">
+            <div className="mt-8 inline-flex rounded-[12px] border border-ink/15 bg-paper p-1" role="group" aria-label="Momento del día">
               {(
                 [
                   { value: "dia", label: "De día", icon: <Sun size={18} /> },
@@ -171,10 +171,10 @@ export function SolarFlow() {
                   onClick={() => cambiarModo(m.value)}
                   aria-pressed={modo === m.value}
                   className={clsx(
-                    "inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
+                    "inline-flex items-center gap-2 rounded-[8px] px-5 py-2.5 text-sm font-semibold transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
                     modo === m.value
                       ? m.value === "dia"
-                        ? "bg-green text-ink"
+                        ? "bg-sky-deep text-paper"
                         : "bg-carbon text-cream"
                       : "text-ink-muted hover:text-ink",
                   )}
@@ -190,15 +190,15 @@ export function SolarFlow() {
           <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <div
               className={clsx(
-                "rounded-[28px] px-4 py-6 transition-colors duration-500 ease-out sm:px-8 sm:py-8",
-                noche ? "bg-carbon text-cream" : "bg-cream text-ink",
+                "rounded-[20px] px-4 py-6 transition-colors duration-500 ease-out sm:px-8 sm:py-8",
+                noche ? "bg-carbon text-cream" : "bg-paper text-ink",
               )}
             >
               <div className="relative mx-auto aspect-[400/520] w-full max-w-[520px]">
                 <svg
                   viewBox="0 0 400 520"
                   className="absolute inset-0 h-full w-full"
-                  style={{ "--flow-color": noche ? "var(--color-green-bright)" : "var(--color-green-vivid)" } as React.CSSProperties}
+                  style={{ "--flow-color": noche ? "var(--color-sky)" : "var(--color-sky-deep)" } as React.CSSProperties}
                   aria-hidden
                 >
                   <defs>
@@ -242,8 +242,8 @@ export function SolarFlow() {
                   <div
                     key={id}
                     className={clsx(
-                      "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-[12px] border px-2 py-1.5 text-center transition-[opacity,background-color,border-color] duration-200 ease-out sm:px-4 sm:py-2.5",
-                      noche ? "border-cream/15 bg-carbon" : "border-ink/10 bg-cream",
+                      "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-[8px] border px-2 py-1.5 text-center transition-[opacity,background-color,border-color] duration-200 ease-out sm:px-4 sm:py-2.5",
+                      noche ? "border-cream/15 bg-carbon" : "border-ink/10 bg-paper",
                     )}
                     style={{
                       left: `${(NODOS[id].x / 400) * 100}%`,
@@ -291,7 +291,7 @@ export function SolarFlow() {
                   <span
                     className={clsx(
                       "tnum mt-1 text-sm font-semibold transition-colors duration-200",
-                      activo === i ? "text-ink" : "text-ink-muted",
+                      activo === i ? "text-sky-ink" : "text-ink-muted",
                     )}
                   >
                     {String(i + 1).padStart(2, "0")}
