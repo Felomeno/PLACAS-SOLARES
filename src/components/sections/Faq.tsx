@@ -15,7 +15,7 @@ export function Faq() {
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="label text-ink-muted">Preguntas frecuentes</p>
+            <p className="label text-green-deep">Preguntas frecuentes</p>
             <h2 className="mt-5 font-display text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-ink sm:text-6xl">
               Antes de instalar placas.
             </h2>

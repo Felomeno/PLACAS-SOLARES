@@ -37,7 +37,7 @@ Single long-scroll marketing homepage (Persuade mode) for a premium photovoltaic
 
 - Name: SOLARA. Logo: wordmark-based (no pre-existing logo asset provided; a simple authored mark is acceptable).
 - Base palette pinned by brief: warm cream/off-white + charcoal black.
-- Accent pinned by user decision (2026-09-23, replacing the earlier amber): premium forest green as the single accent (#173F35 deep, #21604C primary, #2F7A5C interactive, #DDE9E2 / #EEF4F0 surfaces, sage #93C6AD for accents on carbon). Used strategically over cream + carbon; never neon, lime, saturated or eco-template green.
+- Accent pinned by user decision (2026-09-23, revised the same day): vivid modern emerald, clean and technical, never neon or lime. #16A34A primary (buttons use dark #10231B text, 4.9:1, because cream text on it fails AA), #22C55E hover and accents on dark, #147A3A green text on light, #DCFCE7 / #F0FDF4 surfaces. Deep green #12372A for hero, dark sections and footer; cream #FAF8F2, mist cards #EDF2EA, ink #10231B.
 - Motion/intensity pinned by user decision (2026-09-22): "Premium contenido" - restrained, Apple/Linear-like subtlety over loud experimental choreography.
 - Explicit dislikes (brief): template look, excessive cards, generic AI gradients, unnecessary icons, repetitive blocks, exaggerated shadows, distracting animation.
 

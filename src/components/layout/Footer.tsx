@@ -50,7 +50,7 @@ export function Footer() {
             ¿Cuántas placas caben en tu tejado?
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button as="a" href="#contacto" variant="light">
+            <Button as="a" href="#contacto" variant="primary">
               Solicitar estudio solar
             </Button>
             <Button as="a" href="#calculadora" variant="secondaryOnDark">

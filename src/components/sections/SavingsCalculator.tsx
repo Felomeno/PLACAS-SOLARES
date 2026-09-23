@@ -47,7 +47,7 @@ export function SavingsCalculator() {
     <section id="calculadora" className="bg-cream py-24 sm:py-32">
       <Container>
         <div className="max-w-3xl">
-          <p className="label text-ink-muted">Calculadora de instalación solar</p>
+          <p className="label text-green-deep">Calculadora de instalación solar</p>
           <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl lg:text-7xl">
             Configura tu instalación.
           </h2>
@@ -117,7 +117,7 @@ export function SavingsCalculator() {
                       aria-pressed={tipo === t.value}
                       className={clsx(
                         "rounded-full px-4 py-3 text-sm font-medium transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
-                        tipo === t.value ? "bg-green text-cream" : "text-ink hover:bg-cream",
+                        tipo === t.value ? "bg-green text-ink" : "text-ink hover:bg-cream",
                       )}
                     >
                       {t.label}
@@ -228,7 +228,7 @@ export function SavingsCalculator() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xs text-sm text-cream/80">Lo confirmamos con un estudio de tu tejado.</p>
-                <Button as="a" href="#contacto" variant="light" className="shrink-0">
+                <Button as="a" href="#contacto" variant="primary" className="shrink-0">
                   Solicitar estudio solar
                 </Button>
               </div>

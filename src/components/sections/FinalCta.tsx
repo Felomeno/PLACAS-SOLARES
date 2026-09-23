@@ -77,7 +77,7 @@ export function FinalCta() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
           <div className="lg:self-center">
             <div>
-              <p className="label text-cream/85">Estudio solar sin compromiso</p>
+              <p className="label text-green-bright">Estudio solar sin compromiso</p>
               <h2 className="font-display mt-5 text-5xl leading-[0.98] font-normal tracking-[-0.032em] text-balance sm:text-7xl lg:text-[5.5rem]">
                 Tu tejado ya tiene potencial.
               </h2>
@@ -87,7 +87,7 @@ export function FinalCta() {
               </p>
               <a
                 href="#calculadora"
-                className="mt-8 inline-flex items-center gap-2 text-[0.95rem] font-semibold text-cream underline decoration-cream/40 underline-offset-[6px] transition-colors hover:decoration-cream"
+                className="mt-8 inline-flex items-center gap-2 text-[0.95rem] font-semibold text-cream underline decoration-green-bright underline-offset-[6px] transition-colors hover:text-green-bright"
               >
                 Prefiero calcularlo yo primero
               </a>
@@ -142,7 +142,7 @@ export function FinalCta() {
                   ))}
                 </div>
 
-                <Button type="submit" variant="light" className="mt-8 w-full sm:w-auto" disabled={status === "submitting"}>
+                <Button type="submit" variant="primary" className="mt-8 w-full sm:w-auto" disabled={status === "submitting"}>
                   {status === "submitting" ? "Enviando…" : "Solicitar estudio solar"}
                 </Button>
 

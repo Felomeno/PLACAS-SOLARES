@@ -56,8 +56,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f4ec" },
-    { media: "(prefers-color-scheme: dark)", color: "#16211b" },
+    { media: "(prefers-color-scheme: light)", color: "#faf8f2" },
+    { media: "(prefers-color-scheme: dark)", color: "#12372a" },
   ],
 };
 
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <a
           href="#contenido"
-          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-4 focus-visible:left-4 focus-visible:z-[100] focus-visible:rounded-full focus-visible:bg-green focus-visible:px-5 focus-visible:py-3 focus-visible:text-cream focus-visible:font-semibold"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-4 focus-visible:left-4 focus-visible:z-[100] focus-visible:rounded-full focus-visible:bg-green focus-visible:px-5 focus-visible:py-3 focus-visible:text-ink focus-visible:font-semibold"
         >
           Saltar al contenido
         </a>

@@ -86,7 +86,7 @@ export function PanelShowcase() {
           </figure>
 
           <div className="lg:col-span-7 lg:self-center lg:pl-6">
-            <p className="label text-cream/75">Producto</p>
+            <p className="label text-green-bright">Producto</p>
             <h2 className="mt-5 font-display max-w-xl text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance sm:text-6xl lg:text-6xl">
               Paneles pensados para trabajar décadas en tu tejado.
             </h2>

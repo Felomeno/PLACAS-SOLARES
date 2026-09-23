@@ -33,7 +33,7 @@ export function Trust() {
               El mismo cuidado en una vivienda con 8 paneles que en una nave con 80.
             </p>
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-              <Button as="a" href="#contacto" variant="light">
+              <Button as="a" href="#contacto" variant="primary">
                 Solicitar estudio solar
               </Button>
               <Button as="a" href="#faq" variant="secondaryOnDark">

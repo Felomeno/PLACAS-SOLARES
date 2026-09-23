@@ -149,7 +149,7 @@ export function SolarFlow() {
       <Container>
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <div>
-            <p className="label text-ink-muted">Cómo funciona</p>
+            <p className="label text-green-deep">Cómo funciona</p>
             <h2 className="mt-5 font-display max-w-lg text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl">
               Cómo funciona una instalación solar
             </h2>
@@ -174,7 +174,7 @@ export function SolarFlow() {
                     "inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
                     modo === m.value
                       ? m.value === "dia"
-                        ? "bg-green text-cream"
+                        ? "bg-green text-ink"
                         : "bg-carbon text-cream"
                       : "text-ink-muted hover:text-ink",
                   )}

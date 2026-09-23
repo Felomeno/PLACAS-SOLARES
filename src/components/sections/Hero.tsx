@@ -52,7 +52,7 @@ export function Hero() {
               </p>
 
               <div className="rise rise-1 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Button as="a" href="#calculadora" variant="light" className="w-full sm:w-auto">
+                <Button as="a" href="#calculadora" variant="primary" className="w-full sm:w-auto">
                   Calcula tu instalación
                 </Button>
                 <Button as="a" href="#proyectos" variant="secondaryOnDark" className="w-full sm:w-auto">

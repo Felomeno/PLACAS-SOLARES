@@ -15,7 +15,7 @@ export function Projects() {
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <p className="label text-ink-muted">Instalaciones tipo</p>
+            <p className="label text-green-deep">Instalaciones tipo</p>
             <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl lg:text-7xl">
               Tejados listos para producir.
             </h2>
@@ -48,7 +48,7 @@ export function Projects() {
                 <h3 className="font-display text-2xl font-normal tracking-[-0.02em] text-ink sm:text-3xl">
                   {p.title}, {p.location}
                 </h3>
-                <p className="tnum text-sm text-ink-muted">Ahorro estimado {eur(p.ahorroAnual)}/año</p>
+                <p className="tnum text-sm font-semibold text-green-deep">Ahorro estimado {eur(p.ahorroAnual)}/año</p>
               </div>
               <p className="mt-1 text-xs text-ink-muted">Proyecto demostrativo</p>
             </article>

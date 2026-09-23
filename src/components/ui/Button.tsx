@@ -7,7 +7,7 @@ const base =
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-7 py-3.5 text-[0.95rem] font-semibold transition-[transform,background-color,color,border-color] duration-200 ease-out active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-green text-cream hover:bg-green-deep",
+  primary: "bg-green text-ink hover:bg-green-bright",
   light: "bg-cream text-ink hover:bg-green-light",
   secondary: "border border-ink/25 text-ink hover:border-ink/55",
   secondaryOnDark: "border border-cream/45 bg-carbon/30 text-cream backdrop-blur-sm hover:border-cream/80",

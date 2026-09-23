@@ -12,7 +12,7 @@ export function HowItWorks() {
     <section id="proceso" className="bg-cream py-24 sm:py-32">
       <Container>
         <div className="max-w-3xl">
-          <p className="label text-ink-muted">Cómo trabajamos</p>
+          <p className="label text-green-deep">Cómo trabajamos</p>
           <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl lg:text-7xl">
             Cuatro pasos, un mismo equipo.
           </h2>

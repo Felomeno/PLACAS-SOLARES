@@ -32,7 +32,7 @@ export function BillComparison() {
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-20">
           <div>
-            <p className="label text-ink-muted">Ahorro</p>
+            <p className="label text-green-deep">Ahorro</p>
             <h2 className="mt-5 font-display text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance text-ink sm:text-6xl">
               Tu casa, sin placas y con placas.
             </h2>
@@ -53,7 +53,7 @@ export function BillComparison() {
                   aria-pressed={conPlacas === o.value}
                   className={clsx(
                     "rounded-full px-5 py-2.5 text-sm font-semibold transition-[background-color,color,transform] duration-200 active:scale-[0.97]",
-                    conPlacas === o.value ? (o.value ? "bg-green text-cream" : "bg-ink text-cream") : "text-ink-muted hover:text-ink",
+                    conPlacas === o.value ? (o.value ? "bg-green text-ink" : "bg-ink text-cream") : "text-ink-muted hover:text-ink",
                   )}
                 >
                   {o.label}

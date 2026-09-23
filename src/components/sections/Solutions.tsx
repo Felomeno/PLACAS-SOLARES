@@ -17,7 +17,7 @@ export function Solutions() {
       <div className="rounded-[28px] bg-carbon py-20 text-cream sm:rounded-[36px] sm:py-28">
         <Container>
           <div className="max-w-3xl">
-            <p className="label text-cream/75">Qué instalamos</p>
+            <p className="label text-green-bright">Qué instalamos</p>
             <h2 className="font-display mt-5 text-4xl leading-[1.02] font-normal tracking-[-0.028em] text-balance sm:text-6xl lg:text-7xl">
               Todo lo que va en el tejado y detrás de la pared.
             </h2>
